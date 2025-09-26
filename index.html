@@ -19,20 +19,12 @@
     </main>
     <footer>
         
-		<nav>
-            <a href="itis3135">3135 Course Page</a>
-            ||
-			<a href="https://github.com/clewis94">Github</a>
-			||
-			<a href="https://webpages.charlotte.edu/clewis94/">Charlotte.edu</a>
-			||
-			<a href="https://clewis94.github.io/">Github.io</a>
-			||
-			<a href="https://www.linkedin.com/in/connor-lewis-240070346/">LinkedIn</a>
-		</nav>
-		
-	
-    
+		<div data-include="components/footer.html"></div>
     </footer>
+    <script>
+	document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+	document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
+   <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
