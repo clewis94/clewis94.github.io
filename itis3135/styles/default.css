@@ -1,4 +1,4 @@
-/* default.css - Simple stylesheet */
+
 
 body {
     font-family: Arial;
@@ -8,15 +8,25 @@ body {
 
 h1, h2 {
     color: black;
-    text-align: center
+    text-align: center;
 }
 
 a {
-    color: darkmagenta;
+    color: rgb(0, 128, 255);
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: none;
-    color: blue;
+    color: red;
+}
+ul {
+  margin-top: 5px;     
+  margin-bottom: 15px;  
+  padding-left: 20px;   
+  list-style-position: inside;
+}
+
+ul li {
+  margin-bottom: 8px;   
 }
