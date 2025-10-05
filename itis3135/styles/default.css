@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: black;
     text-align: center;
 }
@@ -32,15 +32,11 @@ ul li {
     margin-bottom: 8px;
 }
 
-
 main {
-    width: 90%;            
-    max-width: 1200px;   
-    margin: 0 auto;        
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
-
-
 
 @media screen and (min-width: 981px) and (max-width: 1400px) {
     main {
@@ -48,26 +44,15 @@ main {
     }
 }
 
-
 @media screen and (min-width: 601px) and (max-width: 980px) {
     main {
         width: 95%;
     }
-    h1, h2 {
-        font-size: 1.4em;
-    }
 }
-
 
 @media screen and (max-width: 600px) {
     main {
         width: 98%;
-    }
-    h1 {
-        font-size: 1.2em;
-    }
-    h2 {
-        font-size: 1em;
     }
     ul li {
         margin-bottom: 5px;
