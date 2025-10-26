@@ -1,29 +1,5 @@
 const formElement = document.getElementById("introForm");
 
-formElement.addEventListener("submit", (e) => {
-    e.preventDefault();
-    submitForm();
-});
-
-document.getElementById("clearBtn").addEventListener("click", () => {
-    document.querySelectorAll("form input, form textarea").forEach(el => el.value = "");
-});
-
-document.getElementById("addCourse").addEventListener("click", () => {
-    const container = document.getElementById("courseContainer");
-    const div = document.createElement("div");
-    div.classList.add("course");
-    div.innerHTML = `
-        <input type="text" name="dept[]" placeholder="Department">
-        <input type="text" name="num[]" placeholder="Number">
-        <input type="text" name="courseName[]" placeholder="Course Name">
-        <input type="text" name="reason[]" placeholder="Reason">
-        <button type="button" class="deleteCourse">X</button>
-    `;
-    container.appendChild(div);
-    div.querySelector(".deleteCourse").addEventListener("click", () => div.remove());
-});
-
 function submitForm() {
     const h2 = document.querySelector("h2");
     if (h2) h2.remove();
@@ -36,7 +12,7 @@ function submitForm() {
         bullets.push(el ? el.value : "");
     }
 
-    const courses = Array.from(document.querySelectorAll(".course")).map(courseDiv => ({
+    const courses = Array.from(document.querySelectorAll(".course")).map((courseDiv) => ({
         dept: courseDiv.querySelector("[name='dept[]']").value,
         num: courseDiv.querySelector("[name='num[]']").value,
         name: courseDiv.querySelector("[name='courseName[]']").value,
@@ -46,6 +22,11 @@ function submitForm() {
     const firstName = document.querySelector("[name='firstName']").value;
     const middleName = document.querySelector("[name='middleName']").value;
     const lastName = document.querySelector("[name='lastName']").value;
+    const mascotAdj = document.querySelector("[name='mascotAdj']").value;
+    const mascot = document.querySelector("[name='mascot']").value;
+    const divider = document.querySelector("[name='divider']").value;
+    const ackStatement = document.querySelector("[name='acknowledge']").value;
+    const ackDate = document.querySelector("[name='ackDate']").value;
     const picInput = document.querySelector("[name='picture']");
     const picCaption = document.querySelector("[name='pictureCaption']").value;
     const quote = document.querySelector("[name='quote']").value;
@@ -58,10 +39,10 @@ function submitForm() {
         document.querySelector("[name='link3']").value,
         document.querySelector("[name='link4']").value,
         document.querySelector("[name='link5']").value
-    ].filter(link => link.trim() !== "");
+    ].filter((link) => link.trim() !== "");
 
     let coursesHTML = "";
-    courses.forEach(c => {
+    courses.forEach((c) => {
         coursesHTML += `<li><strong>${c.dept} ${c.num} - ${c.name}:</strong> ${c.reason}</li>`;
     });
 
@@ -80,6 +61,9 @@ function submitForm() {
                 <li><strong>Professional Background:</strong> ${bullets[1]}</li>
                 <li><strong>Academic Background:</strong> ${bullets[2]}</li>
                 <li><strong>Primary Computer:</strong> ${bullets[3]}</li>
+                <li><strong>Mascot:</strong> ${mascotAdj} ${mascot} ${divider}</li>
+                ${ackStatement ? `<li><strong>Acknowledgment Statement:</strong> ${ackStatement}</li>` : ''}
+                ${ackDate ? `<li><strong>Acknowledgment Date:</strong> ${ackDate}</li>` : ''}
                 <li><strong>Course I'm Taking & Why:</strong>
                     <ul>${coursesHTML}</ul>
                 </li>
@@ -88,7 +72,7 @@ function submitForm() {
                 ${funny ? `<li><strong>Funny Thing:</strong> ${funny}</li>` : ''}
                 ${share ? `<li><strong>Something to Share:</strong> ${share}</li>` : ''}
             </ul>
-            ${links.length > 0 ? `<p>Links:</p><ul>${links.map(link => `<li><a href="${link}" target="_blank">${link}</a></li>`).join('')}</ul>` : ''}
+            ${links.length > 0 ? `<p>Links:</p><ul>${links.map((link) => `<li><a href="${link}" target="_blank">${link}</a></li>`).join('')}</ul>` : ''}
             <button id="resetResult">Reset Form</button>
         `;
 
@@ -101,3 +85,27 @@ function submitForm() {
         reader.onload();
     }
 }
+
+formElement.addEventListener("submit", (e) => {
+    e.preventDefault();
+    submitForm();
+});
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+    document.querySelectorAll("form input, form textarea").forEach((el) => el.value = "");
+});
+
+document.getElementById("addCourse").addEventListener("click", () => {
+    const container = document.getElementById("courseContainer");
+    const div = document.createElement("div");
+    div.classList.add("course");
+    div.innerHTML = `
+        <input type="text" name="dept[]" placeholder="Department">
+        <input type="text" name="num[]" placeholder="Number">
+        <input type="text" name="courseName[]" placeholder="Course Name">
+        <input type="text" name="reason[]" placeholder="Reason">
+        <button type="button" class="deleteCourse">X</button>
+    `;
+    container.appendChild(div);
+    div.querySelector(".deleteCourse").addEventListener("click", () => div.remove());
+});
