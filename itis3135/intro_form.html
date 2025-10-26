@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction Form</title>
+  <script src="scripts/introduction.js" defer></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/default.css">
+</head>
+
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+
+  <main>
+    <h2>Introduction Form</h2>
+    <h3>Please submit the form below.</h3>
+
+    <form id="introForm" novalidate>
+      <label>First Name:
+        <input type="text" name="firstName" value="Connor" placeholder="Connor..." required>
+      </label><br>
+
+      <label>Middle Name/Initial:
+        <input type="text" name="middleName" value="J." placeholder="J.">
+      </label><br>
+
+      <label>Preferred/Nickname:
+        <input type="text" name="nickname" value="Connor" placeholder="Preferred name...">
+      </label><br>
+
+      <label>Last Name:
+        <input type="text" name="lastName" value="Lewis" placeholder="Lewis..." required>
+      </label><br>
+
+      <label>Acknowledgement Statement:
+        <input type="text" name="acknowledge" value="I certify this is my work..." placeholder="I certify this is my work...">
+      </label><br>
+
+      <label>Acknowledgement Date:
+        <input type="date" name="ackDate" value="2025-10-26" placeholder="Select date...">
+      </label><br>
+
+      <label>Mascot Adjective:
+        <input type="text" name="mascotAdj" value="Cunning" placeholder="Cunning...">
+      </label><br>
+
+      <label>Mascot Animal:
+        <input type="text" name="mascot" value="Cougar" placeholder="Cougar...">
+      </label><br>
+
+      <label>Divider:
+        <input type="text" name="divider" value="||" placeholder="~">
+      </label><br>
+
+      <label>Picture:
+        <input type="file" name="picture">
+      </label><br>
+
+      <label>Picture Caption:
+        <input type="text" name="pictureCaption" value="A photo of me before attending a career fair in 2023" placeholder="Me in action...">
+      </label><br>
+
+      <label>Personal Statement:
+        <textarea name="personalStatement" placeholder="Born and raised in...">Born and raised in Thomasville, NC I moved to Asheboro after graduating high school and focused on getting my degree in computer science. Some of my hobbies include gaming, watching horror movies, and playing basketball.</textarea>
+      </label><br><br>
+
+      <h4>7 Main Bullets</h4>
+      <input type="text" name="bullet1" value="Born and raised in Thomasville, NC I moved to Asheboro after graduating high school and focused on getting my degree in computer science. Some of my hobbies include gaming, watching horror movies, and playing basketball." placeholder="Personal Background"><br>
+      <input type="text" name="bullet2" value="I have no experience in the technology field yet, but I have worked in traffic control, at Domino’s, and at a movie theater." placeholder="Professional Background"><br>
+      <input type="text" name="bullet3" value="I graduated from Thomasville High School as valedictorian, and I am concentrating on AI, Robotics, and Gaming." placeholder="Academic Background"><br>
+      <input type="text" name="bullet4" value="The computer I mainly use is my Dell windows laptop that I use either at my house or on campus." placeholder="Primary Computer"><br>
+      <input type="text" name="bullet5" value="Gaming, watching horror movies, and playing basketball." placeholder="Hobbies"><br>
+      <input type="text" name="bullet6" value="To pursue a career in AI, Robotics, or Gaming." placeholder="Ambitions"><br>
+      <input type="text" name="bullet7" value="Continue improving my coding and design skills." placeholder="Goals"><br><br>
+
+      <h4>Courses</h4>
+      <div id="courseContainer">
+        <div class="course">
+          <input type="text" placeholder="Department" name="dept[]" value="ITIS">
+          <input type="text" placeholder="Number" name="num[]" value="3135">
+          <input type="text" placeholder="Name" name="courseName[]" value="Web Development">
+          <input type="text" placeholder="Reason" name="reason[]" value="I am taking this so I can better understand frontend coding.">
+        </div>
+        <div class="course">
+          <input type="text" placeholder="Department" name="dept[]" value="ITCS">
+          <input type="text" placeholder="Number" name="num[]" value="4123">
+          <input type="text" placeholder="Name" name="courseName[]" value="Visualization and Visual Communication">
+          <input type="text" placeholder="Reason" name="reason[]" value="I chose this course because I thought the concept of visualization in Unity3D seemed very interesting.">
+        </div>
+        <div class="course">
+          <input type="text" placeholder="Department" name="dept[]" value="ITSC">
+          <input type="text" placeholder="Number" name="num[]" value="3146">
+          <input type="text" placeholder="Name" name="courseName[]" value="Oper Syst & Networking">
+          <input type="text" placeholder="Reason" name="reason[]" value="I am taking this class because I felt as if knowing more about operating systems could be useful in my pursuit of a career path.">
+        </div>
+        <div class="course">
+          <input type="text" placeholder="Department" name="dept[]" value="STAT">
+          <input type="text" placeholder="Number" name="num[]" value="2122">
+          <input type="text" placeholder="Name" name="courseName[]" value="Intro to Prob & Stat">
+          <input type="text" placeholder="Reason" name="reason[]" value="This was the last class I needed to take in order to finish the math portion of my degree.">
+        </div>
+      </div>
+      <button type="button" id="addCourse">Add Course</button><br><br>
+
+      <label>Quote:
+        <input type="text" name="quote" placeholder="Inspirational quote...">
+      </label><br>
+
+      <label>Quote Author:
+        <input type="text" name="quoteAuthor" placeholder="Quote Author">
+      </label><br>
+
+      <label>Funny Thing:
+        <input type="text" name="funny" placeholder="Optional">
+      </label><br>
+
+      <label>Something to Share:
+        <textarea name="share" placeholder="Optional"></textarea>
+      </label><br><br>
+
+      <h4>5 Links</h4>
+      <input type="url" name="link1" placeholder="https://link1.com"><br>
+      <input type="url" name="link2" placeholder="https://link2.com"><br>
+      <input type="url" name="link3" placeholder="https://link3.com"><br>
+      <input type="url" name="link4" placeholder="https://link4.com"><br>
+      <input type="url" name="link5" placeholder="https://link5.com"><br><br>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+      <button type="button" id="clearBtn">Clear</button>
+    </form>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+  <script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+</html>
