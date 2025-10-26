@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Introduction Form</title>
 <link rel="stylesheet" href="styles/default.css">
-<script src="scripts/introduction.js" defer></script>
 <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+<script src="scripts/introduction.js" defer></script>
 </head>
 <body>
 <div data-include="components/header.html"></div>
@@ -16,7 +16,6 @@
     <h3>Please submit the form below.</h3>
 
     <form id="introForm">
-        <!-- Name -->
         <label>First Name:
             <input type="text" name="firstName" value="Connor" placeholder="Enter your first name">
         </label><br>
@@ -38,10 +37,9 @@
         </label><br>
 
         <label>Acknowledgement Date:
-            <input type="date" name="ackDate" value="">
+            <input type="date" name="ackDate" pattern="\d{4}-\d{2}-\d{2}">
         </label><br>
 
-        <!-- Mascot -->
         <label>Mascot Adjective:
             <input type="text" name="mascotAdj" value="Cunning" placeholder="Enter mascot adjective">
         </label><br>
@@ -54,7 +52,6 @@
             <input type="text" name="divider" value="~" placeholder="Enter a divider symbol">
         </label><br>
 
-        <!-- Picture -->
         <label>Picture:
             <input type="file" name="picture">
         </label><br>
@@ -63,7 +60,6 @@
             <input type="text" name="pictureCaption" value="A photo of me before attending a career fair in 2023" placeholder="Caption for the picture">
         </label><br>
 
-        <!-- 7 Main Bullets -->
         <label>Personal Background:
             <input type="text" name="bullet1" value="Born and raised in Thomasville, NC I moved to Asheboro after graduating high school and focused on getting my degree in computer science. Some of my hobbies include gaming, watching horror movies, and playing basketball." placeholder="Personal Background">
         </label><br>
@@ -80,7 +76,6 @@
             <input type="text" name="bullet4" value="The computer I mainly use is my Dell windows laptop that I use either at my house or on campus." placeholder="Primary Computer">
         </label><br>
 
-        <!-- Courses -->
         <h4>Courses</h4>
         <div id="courseContainer">
             <div class="course">
@@ -110,7 +105,6 @@
         </div>
         <button type="button" id="addCourse">Add Course</button><br><br>
 
-        <!-- Quote -->
         <label>Quote:
             <input type="text" name="quote" value="" placeholder="Enter a quote">
         </label><br>
@@ -119,7 +113,6 @@
             <input type="text" name="quoteAuthor" value="" placeholder="Author of the quote">
         </label><br>
 
-        <!-- Optional Fields -->
         <label>Funny Thing:
             <input type="text" name="funny" value="" placeholder="Optional funny thing">
         </label><br>
@@ -128,7 +121,6 @@
             <textarea name="share" placeholder="Optional"></textarea>
         </label><br><br>
 
-        <!-- Links -->
         <h4>5 Links</h4>
         <input type="url" name="link1" value="" placeholder="Enter link 1"><br>
         <input type="url" name="link2" value="" placeholder="Enter link 2"><br>
