@@ -1,6 +1,6 @@
 const galleries = document.querySelectorAll('.gallery');
 let images = [];
-galleries.forEach(g => images.push(...g.querySelectorAll('img')));
+galleries.forEach((g) => images.push(...g.querySelectorAll('img')));
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');

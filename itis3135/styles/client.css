@@ -17,15 +17,6 @@ header {
     padding: 25px 0;
     text-align: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    color: white;
-    text-align: center;
 }
 
 nav a {
@@ -59,7 +50,6 @@ main {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    border: 2px solid #19563a; /* dark green border */
     transition: transform 0.3s, box-shadow 0.3s;
     object-fit: cover;
 }
@@ -70,6 +60,14 @@ main {
 }
 
 /* Headings */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+}
+
 h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
@@ -159,38 +157,28 @@ button:hover {
     padding-left: 10px;
     color: #ffffff;
 }
+
+/* Logo */
 .logo img {
-    width: 200px;  /* sets the logo width */
-    height: auto;  /* maintains aspect ratio */
+    max-width: 200px;  /* safer width with border/padding */
+    height: auto;      /* maintains aspect ratio */
 }
+
+/* Home intro section */
 .home-intro {
-    text-align: center;   /* centers text inside this section */
-    max-width: 800px;     /* optional: limit width for better readability */
-    margin: 0 auto 40px;  /* centers section horizontally and adds bottom spacing */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
 }
+
+/* Lists */
 ul {
-    list-style-type: disc; /* bullet points */
-    margin-left: 20px;     /* space from parent container */
-    padding-left: 0;       /* reset default padding */
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
 }
 
-/* Nested list */
 ul ul {
-    list-style-type: circle; /* smaller bullet for nested list */
-    margin-left: 30px;       /* extra indentation for nested list */
-}
-
-/* Responsive spacing */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.6rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
+    list-style-type: circle;
+    margin-left: 30px;
 }
