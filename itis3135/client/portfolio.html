@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio - NC Triad Photography</title>
 <link rel="stylesheet" href="../styles/client.css">
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -15,8 +16,7 @@
             <img src="../images/logo.png" alt="NC Triad Photography Logo">
         </a>
     </div>
-    <nav>
-        <nav class="navbar">
+    <nav class="navbar">
         <a href="index.html" class="nav-link">Home</a>
         <span class="nav-separator">|</span>
         <a href="portfolio.html" class="nav-link">Portfolio</a>
@@ -31,26 +31,39 @@
 
 <main>
     <h2>Our Portfolio</h2>
-    <p>Browse our photography portfolio categorized by type.</p>
-
-    <h3>Placeholder</h3>
+    <p>Browse our photography portfolio that showcases a variety of styles and subjects professional and personal.</p>
     <div class="gallery">
-        <img src="images/wedding1.jpg" alt="Wedding 1">
-        <img src="images/wedding2.jpg" alt="Wedding 2">
-        <img src="images/wedding3.jpg" alt="Wedding 3">
+        <img src="../images/client2.jpg" alt="Wedding 1">
+        <img src="../images/client3.jpg" alt="Wedding 2">
+        <img src="../images/client4.jpg" alt="Wedding 3">
+        <img src="../images/client5.jpg" alt="Portrait 1">
+        <img src="../images/client9.jpg" alt="Portrait 2">
+        <img src="../images/client6.jpg" alt="Portrait 3">
+        <img src="../images/client7.jpg" alt="Real Estate 1">
+        <img src="../images/client8.jpg" alt="Real Estate 2">
+        
     </div>
 
-    <h3>Placeholder</h3>
-    <div class="gallery">
-        <img src="images/portrait1.jpg" alt="Portrait 1">
-        <img src="images/portrait2.jpg" alt="Portrait 2">
-        <img src="images/portrait3.jpg" alt="Portrait 3">
+    <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+         background-color: rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000; flex-direction:column;">
+        <button id="closeBtn" style="position:absolute; top:20px; right:20px; font-size:24px; color:white; background:none; border:none; cursor:pointer;">&times;</button>
+        <img id="lightboxImg" style="max-width:90%; max-height:80%; margin-bottom:10px;">
+        <div>
+            <button id="prevBtn" style="margin-right:10px;">Previous</button>
+            <button id="nextBtn">Next</button>
+        </div>
     </div>
 </main>
 
 <footer>
     <p>&copy; 2025 NC Triad Photography</p>
 </footer>
+
+<script>
+	document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+	document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
+<script src="../scripts/portfolio.js"></script>
 
 </body>
 </html>

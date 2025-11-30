@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services/FAQ - NC Triad Photography</title>
 <link rel="stylesheet" href="../styles/client.css">
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -30,31 +31,33 @@
 
 <main>
     <section class="home-intro">
-    <h2>Our Services & FAQ</h2>
+        <h2>Our Services & FAQ</h2>
+        <button id="sortPriceBtn">Sort Services by Starting Price</button>
     </section>
-    <ul>
-        <li><strong>Real Estate</strong> 
+
+    <ul id="servicesList">
+        <li><strong>Real Estate</strong> - $250
             <ul>
-                <li>$250 for 1-2 pictures of each room, drone video of the property. 
-                <li>Updated Floorplan for an additional $35.</li>
+                <li>1-2 pictures of each room, drone video of the property.</li>
+                <li>Updated Floorplan for an additional charge.</li>
             </ul>
         </li>
 
-        <li><strong>Event</strong> - $75/hr for edited photos of the event
+        <li><strong>Event</strong> - $50/hr 
             <ul>
-                <li>$150 for 45 min of edited drone footage of the event
-                <li>There's a bunch of additional info regarding regulations of drones over large outdoor gatherings, it will need a section with the event and advertising drone pricing.</li>
+                <li>45 min of edited drone footage of the event.</li>
+                <li>There's a bunch of additional info regarding regulations of drones over large outdoor gatherings.</li>
             </ul>
         </li>
-        <li><strong>Advertising</strong>
+        <li><strong>Advertising</strong> - $75
             <ul>
-                <li>$75 for one dozen edited photos of business/products.</li>
-                <li>$150 - 45 min of edited drone footage advertising the business/products.</li>
+                <li>One dozen edited photos of business/products.</li>
+                <li>45 min of edited drone footage advertising the business/products.</li>
             </ul>
         </li>
-        <li><strong>Portraits</strong>
+        <li><strong>Portraits</strong> - $60
             <ul>
-                <li>$75 for one dozen edited photos.</li>
+                <li>one dozen edited photos.</li>
                 <li>$25 travel fee for all shoots, unless within 30 miles.</li>
                 <li>Unedited footage and pictures can be scheduled at a reduced price.</li>
             </ul>
@@ -80,5 +83,11 @@
     <p>&copy; 2025 NC Triad Photography</p>
 </footer>
 
+
+<script src="../scripts/priceSort.js"></script>
+<script>
+	document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+	document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
 </body>
 </html>

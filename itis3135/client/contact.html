@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact - NC Triad Photography</title>
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../styles/client.css">
 </head>
 <body>
@@ -32,18 +33,26 @@
     <h2>Contact Us</h2>
     <p>Have questions or want to book a session? Fill out the form below.</p>
 
-    <form>
+    <form id="contactForm">
         <input type="text" placeholder="Name" required>
         <input type="email" placeholder="Email" required>
         <input type="tel" placeholder="Phone">
         <textarea placeholder="Message" rows="5" required></textarea>
         <button type="submit">Submit</button>
     </form>
+
+    
+    <p id="submitMessage"></p>
 </main>
 
 <footer>
     <p>&copy; 2025 NC Triad Photography</p>
 </footer>
 
+<script>
+	document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+	document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
+   <script src="../scripts/contact.js"></script>
 </body>
 </html>
